@@ -20,8 +20,8 @@ This creates the node_modules folder based on `package.json`.
 
 ## Open the App
 
-To start the local development server:
+Once inside the `tourism-promotion-web-page-project` directory you can now **start the local development server**:
 
-> Run `npm start`
+    npm start
 
-The application will launch automatically in your default browser at http://localhost:3000
+This will automatically launch the application in your default browser at http://localhost:3000
