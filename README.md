@@ -8,11 +8,15 @@ Open your terminal and run the following command **when located inside the direc
 
     git clone https://github.com/Oriol35/tourism-promotion-web-page-project.git
 
-**Make sure you have Node.js installed on your computer.**
+Move into the installed folder using:
 
-> Run `npm install`
+    cd tourism-promotion-web-page-project
 
-This creates the node_modules folder based on package.json.
+**Make sure you have Node.js installed on your computer.** Then use this command:
+
+    npm install
+
+This creates the node_modules folder based on `package.json`.
 
 ## Open the App
 
