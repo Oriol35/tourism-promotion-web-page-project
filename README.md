@@ -5,7 +5,7 @@
 **1. Clone the repository**
 Open your terminal and run the following command to download the source code:
 
-    `git clone https://github.com/Oriol35/tourism-promotion-web-page-project.git`
+    git clone https://github.com/Oriol35/tourism-promotion-web-page-project.git
 
 > Make sure you have Node.js installed on your computer.
 >
