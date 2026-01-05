@@ -1,0 +1,51 @@
+.footer {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 3rem 2rem 1rem;
+  margin-top: auto; /* Pushes footer down when the page is short */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* This was useful https://www.w3schools.com/cssref/pr_grid-template-columns.php */
+  gap: 5rem;
+  margin-bottom: 2rem;
+}
+
+.column h3 {
+  color: #f1c40f; /* Girona Gold */
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.column p,
+.column a {
+  color: #bdc3c7;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.column a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.bottomBar {
+  border-top: 1px solid #34495e;
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #7f8c8d;
+}

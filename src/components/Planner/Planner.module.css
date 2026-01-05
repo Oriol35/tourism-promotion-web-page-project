@@ -1,0 +1,165 @@
+.container {
+  display: flex;
+  height: calc(
+    100vh - 80px
+  ); /* Fill screen minus Navbar height, works out flawlessly*/
+  overflow: hidden; /* Stop the whole page from growing */
+  background-color: #f8f9fa;
+}
+
+/* --- LEFT SIDE: Scrollable Activities --- */
+.activitiesColumn {
+  flex: 1; /* Takes remaining space */
+  overflow-y: auto; /* Internal scroll */
+  padding: 2rem;
+}
+
+.activitiesColumn h1 {
+  color: #2c3e50;
+  margin-bottom: "10px";
+}
+
+.indication {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.limitedTime {
+  color: #d35400;
+}
+
+.allYear {
+  color: #2c3e50;
+  margin-top: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* --- RIGHT SIDE: Fixed Sidebar --- */
+.sidebar {
+  width: 400px;
+  background: white;
+  padding: 2rem;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.sidebarHeader {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.sidebarHeader h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.stats {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.emptyList {
+  font-style: italic;
+  color: #bdc3c7;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* --- THE TRIP LIST --- */
+.tripList {
+  flex: 1;
+  overflow-y: auto; /* Scrolls if list gets too long */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tripItem {
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.tripItem:hover {
+  border-color: #bdc3c7;
+}
+
+.itemInfo {
+  font-size: 0.9rem;
+}
+
+.itemDate {
+  font-weight: bold;
+  color: #e67e22;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.itemTitle {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.itemDuration {
+  color: #95a5a6;
+  font-size: 0.8rem;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0 5px;
+}
+
+.removeBtn:hover {
+  font-weight: bold;
+}
+
+.downloadBtn {
+  background-color: #209250;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  transition: 0.2s background-color;
+}
+
+.downloadBtn:hover {
+  background-color: #196e3b;
+}
+
+.downloadBtn:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}

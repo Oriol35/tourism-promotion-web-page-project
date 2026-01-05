@@ -1,0 +1,74 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Make them pop up nicely */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0 0 10px 0;
+  font-size: 1.25rem;
+  color: #2c3e50;
+}
+
+.description {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.duration {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: bold;
+}
+
+.addBtn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.addBtn:hover {
+  background-color: #219150;
+}
+
+.addBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

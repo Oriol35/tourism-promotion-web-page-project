@@ -1,0 +1,105 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 3rem;
+  background: white;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section:nth-child(even) {
+  flex-direction: row-reverse; /* Zig-zag layout */
+  background: #f9f9f9; /* contrast */
+}
+
+.textContent {
+  flex: 1;
+  /*width: 50%;*/
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-family: "Segoe UI", "Times New Roman", serif;
+}
+
+.text {
+  font-family: "Segoe UI", "Times New Roman", serif;
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+.mediaContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, filter 0.5s ease;
+}
+
+.image:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+.doubleImageGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.doubleImageGrid .image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.doubleImageGrid .image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Crop image to ideal size */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* This is for double images 
+
+I've learnt about clip-path and fell in love with it: 
+https://www.w3schools.com/cssref/func_polygon.php
+*/
+.doubleImageGrid .image:nth-child(1) {
+  z-index: 2;
+  border-radius: 8px 8px 0 0;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  transform: translateY(20px);
+}
+
+.doubleImageGrid .image:nth-child(2) {
+  z-index: 1;
+  border-radius: 0 0 8px 8px;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  transform: translateY(-20px);
+}
+
+.doubleImageGrid .image:hover {
+  transform: scale(1.01); /* Efecte de zoom quan el ratolí passa per sobre */
+}
+
+/* I tried to make it phone friendly. I think it worked out great */
+@media (max-width: 768px) {
+  .section,
+  .section:nth-child(even) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
